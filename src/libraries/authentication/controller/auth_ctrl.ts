@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import jwt from "jsonwebtoken";
-import User from "../../user/model/user_model";
+import User from "../../../apps/user/model/user.model";
 import admin from "firebase-admin";
 const JWT_SECRET =
   process.env.JWT_SECRET || "TheB7cSbVyLvahq5BetpbcV/LccVBDnm+5GBMG6q5aA=";

@@ -1,10 +1,10 @@
 import express from "express";
 import http from "http";
 import mongoose from "mongoose";
-import { config } from "./config/config";
-import Logging from "./library/logging";
-import authRoutes from "./authentication/routes/auth_route";
-import userRoutes from "./user/routes/user_route";
+import { config } from "./config/mongo_client";
+import Logging from "./libraries/logger/logging";
+import authRoutes from "./libraries/authentication/routes/auth_route";
+import userRoutes from "./apps/user/routes/user.route";
 
 var admin = require("firebase-admin");
 
@@ -90,6 +90,31 @@ const StartServer = () => {
     );
 };
 
-
-
 // To run redis ->  redis-server
+
+
+
+
+
+
+
+// import { WebSocketServer, WebSocket } from "ws";
+
+// const wss = new WebSocketServer({ port: 8080 });
+
+// wss.on("connection", (ws: WebSocket) => {
+//   console.log("Client connected");
+
+//   ws.on("message", (message) => {
+//     const decodedMessage = message.toString();
+//     console.log("Received message:", decodedMessage);
+
+//     // Broadcast to all connected clients (excluding the sender)
+//     wss.clients.forEach((client) => {
+//       if (client !== ws && client.readyState === WebSocket.OPEN) {
+//         client.send(message);
+//       }
+//     });
+//   });
+// });
+// console.log("WebSocket server listening on port 8080");

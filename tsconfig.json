@@ -9,6 +9,6 @@
     "outDir": "./build",
     "rootDir": "./src"
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "src/libraries/logger/logging.ts","src/config/config.ts"],
   "exclude": ["node_modules"]
 }

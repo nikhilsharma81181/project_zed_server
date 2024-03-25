@@ -18,7 +18,7 @@ $ docker run --name {name-of-container} -d -p {port}:{port} --env-file .env {nam
 
 Example:
 # Run Docker container from image
-$ docker run --name my-node-container -d -p 8080:8080 --env-file .env Nikhil117/projectzed:0.0.1
+$ docker run --name ZedContainer -d -p 8080:8080 --env-file .env Nikhil117/projectzed:0.0.1
 
 
 Cloud Deployment (Google Cloud Run):
@@ -53,3 +53,14 @@ Example:
 
 # Deploy Docker image to Google Cloud Run with environment variables
 $ gcloud run deploy --image gcr.io/my-project/my-node-app:latest --platform managed --set-env-vars DB_HOST=localhost,DB_USER=admin,DB_PASS=password
+
+
+
+
+
+
+
+[text](https://fonts.google.com/icons)
+
+# Tagging docker image for gcp upload
+docker tag Nikhil117/projectzed:0.0.1 gcr.io/esportshub-a6b1f/projectzed 

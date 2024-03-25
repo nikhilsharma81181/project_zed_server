@@ -7,3 +7,4 @@ serviceAccountKey.json
 serviceAccountKey.json/
 .DS_Store
 /.DS_Store/
+package-lock.json

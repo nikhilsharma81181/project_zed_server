@@ -1,8 +1,5 @@
 # Use the official Node.js 18 image as base
-FROM node:18.16.1
-
-# Install Redis
-RUN apt-get update && apt-get install -y redis-server 
+FROM --platform=linux/amd64 node:18.16.1
 
 # Set working directory
 WORKDIR /app
@@ -26,7 +23,8 @@ RUN npm run build
 # Set environment variables
 ENV PORT=9090
 
-# Expose ports for Node.js and Redis
-EXPOSE 9090 6379
+# Expose port for Node.js
+EXPOSE 9090
 
-CMD ["redis-server", "--daemonize", "yes"] && ["npm", "start"]  
+# Command to start the application
+CMD ["npm", "start"]

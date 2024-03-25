@@ -1,12 +1,12 @@
-import { createClient } from "redis";
-import Logging from "../library/logging";
+// import { createClient } from "redis";
+// import Logging from "../libraries/logger/logging";
 
-const client = createClient();
+// const client = createClient();
 
-client.on("error", (err) => console.log("Redis Client Error", err));
+// client.on("error", (err) => console.log("Redis Client Error", err));
 
-client.connect().then(() => {
-  Logging.info("Redis connected successfully.");
-});
+// client.connect().then(() => {
+//   Logging.info("Redis connected successfully.");
+// });
 
-export default client;
+// export default client;
